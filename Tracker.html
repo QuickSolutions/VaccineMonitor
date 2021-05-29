@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Covid-19 Vaccine Monitoring</title>
+    <link rel="stylesheet" href="Tracker.css" />
+    <script type="module" src="Tracker.js"></script>
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="bootstrap.min.css" />
+  </head>
+
+  <style>
+    @keyframes blinking {
+      0% {
+        background-color: #06c3d1;
+        border: 1px solid #666;
+        padding-left: 2px;
+        padding-right: 2px;
+      }
+      100% {
+        background-color: #0da63b;
+        border: 1px solid #666;
+        padding-left: 4px;
+        padding-right: 2px;
+      }
+    }
+    #blink {      
+      animation: blinking 1s infinite;
+    }
+  </style>
+</head>
+  <body>
+    <!-- For demo purpose -->
+    <div class="container text-center text-white">
+      <div class="row pt-1">
+        <div class="col-lg-8 mx-auto">
+          <h1 class="display-5">Covid-19 Vaccine Monitoring</h1>
+          <p class="lead mb-1">
+            This is aiming to ease the monitoring of Vaccine availability at
+            desired center. <br />Data is obtained using CoWin Open API and data
+            might be delayed per provider rules.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- End -->
+
+    <div class="container py-1">
+      <div class="row">
+        <div class="col-lg-12 mx-auto bg-white rounded shadow">
+          <!-- Fixed header table-->
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr id="dataHeader">
+                  <th scope="col" class="col-3">Hospital</th>
+                </tr>
+              </thead>
+              <tbody id="dataDetails"></tbody>
+            </table>
+          </div>
+          <!-- End -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
